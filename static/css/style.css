@@ -1,0 +1,122 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F0E6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3E2723 !important;
+    padding: 15px 0;
+}
+.navbar-brand { display: flex; align-items: center; text-decoration: none; }
+.navbar-brand img { height: 60px; width: auto; }
+.brand-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px;
+}
+.nav-link { color: white !important; }
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: url("../images/bariya/img2.jpeg") center/cover;
+    position: relative;
+}
+.hero-overlay {
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; color: white;
+}
+.hero h1 { font-size: 3.5rem; font-weight: 700; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; }
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-listing {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.card-listing:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+}
+.card img { height: 250px; object-fit: cover; }
+
+/* Gallery */
+.gallery-image {
+    width: 100%; height: 350px; object-fit: cover; transition: 0.3s;
+}
+.gallery-image:hover { transform: scale(1.02); }
+
+/* Detail card */
+.detail-card {
+    background-color: #FDF8F2;
+    color: #333;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid #E0D5C5;
+}
+.detail-card h2, .detail-card h3 { color: #3E2723; }
+.detail-card strong { color: #5D4037; }
+.detail-card ul li { margin-bottom: 6px; color: #555; }
+.detail-card hr { border-color: #E0D5C5; }
+
+/* About banner */
+.about-banner {
+    background: url("../images/about-bg.jpeg") center/cover;
+    min-height: 550px;
+    position: relative;
+}
+.about-overlay {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    min-height: 550px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; text-align: center;
+}
+.about-overlay h2 { font-size: 4rem; font-weight: 700; margin-bottom: 30px; }
+.about-overlay p { font-size: 1.2rem; max-width: 900px; margin: 0 auto 20px; line-height: 1.9; }
+
+/* About page */
+.about-page .card { background-color: #FDF8F2; border: 1px solid #E0D5C5; }
+.about-page h3 { color: #3E2723; margin-top: 1.5rem; }
+
+/* Buttons */
+.btn-success {
+    background-color: #5D4037;
+    border-color: #5D4037;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+.btn-success:hover { background-color: #4E342E; border-color: #4E342E; }
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background-color: #3E2723 !important;
+    color: white;
+}
+
+/* Forms */
+form label { margin-bottom: 8px; font-weight: 600; }
+.form-control { border-radius: 10px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero { height: 70vh; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; padding: 0 15px; }
+    .gallery-image { height: 250px; }
+    .brand-text { font-size: 1.2rem; }
+}
