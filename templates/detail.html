@@ -48,6 +48,23 @@
         <hr>
         <h3 class="mt-4">Description</h3>
         <p>{{ homestay.description }}</p>
+
+        <h3 class="mt-4">Pricing</h3>
+        <div class="row text-center">
+            <div class="col-md-6 mb-3">
+                <div class="p-3 rounded" style="background:#F5F0E6;">
+                    <h5 class="mb-1" style="color:#5D4037;">Monday – Friday</h5>
+                    <p class="mb-0 fs-4 fw-bold" style="color:#3E2723;">₹{{ homestay.price_weekday }} / night</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="p-3 rounded" style="background:#F5F0E6;">
+                    <h5 class="mb-1" style="color:#5D4037;">Saturday – Sunday</h5>
+                    <p class="mb-0 fs-4 fw-bold" style="color:#3E2723;">₹{{ homestay.price_weekend }} / night</p>
+                </div>
+            </div>
+        </div>
+
         <h3 class="mt-4">Amenities</h3>
         <ul>
             <li>Mountain Views</li>
@@ -94,7 +111,7 @@ function sendWhatsApp() {
         alert('Please select check-in and check-out dates.');
         return;
     }
-    const msg = `Hi! I'd like to book *${name}*.\n\n📅 Check-in: ${checkin}\n📅 Check-out: ${checkout}\n👥 Guests: ${guests}\n\nPlease let me know availability!`;
+    const msg = `Hi! I'd like to book *${name}*.\n\n📅 Check-in: ${checkin}\n📅 Check-out: ${checkout}\n👥 Guests: ${guests}\n\nWeekday rate: ₹{{ homestay.price_weekday }}/night\nWeekend rate: ₹{{ homestay.price_weekend }}/night\n\nPlease let me know availability!`;
     window.open('https://wa.me/918104990014?text=' + encodeURIComponent(msg), '_blank');
 }
 </script>
